@@ -75,6 +75,7 @@ struct sockaddr_in sin;
    	newClient->m_groupVector = VectorCreate(20, 5);
    	if (newClient->m_groupVector == NULL)
 	{
+       		free(newClient);
        		return NULL;
    	}
    	newClient -> m_magicNumber = MAGIC_NUMBER;
